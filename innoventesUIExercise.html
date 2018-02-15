@@ -1,0 +1,555 @@
+<html>
+<head>
+	<title>UI</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="Lib/bootstrap4/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+    <link href="Lib/bootstrap4/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+	
+<style>
+	
+	h1{
+			background-color:white;
+			color:red;
+			text-align: center;
+			padding: 5px;
+		}
+	 img{
+				float: left;
+				padding: 0px;
+				margin: 0px;
+				}
+				.pageLeftPanel
+				{
+					background-color: #9e9e9e29;
+					/*float: left;*/
+					clear: none;
+					min-height: 700px;
+					width:100%;
+					box-sizing: border-box;
+					padding: 0px; 
+				}
+
+					 /*.nav a
+	 {
+			color: red;
+  			text-align: le;
+  			 			text-decoration: none;
+  			font-size: 10px;
+  		
+	}*/
+		a{
+			text-decoration: none;
+		}
+	ul li {
+		display: inline-flex;
+		text-decoration: none;
+
+	}
+
+	nav ul li a {
+		margin:5px;
+		padding: 10px;
+		text-decoration: none;
+
+	} 
+	nav ul li a:hover{
+border: 1px solid black;
+		margin:5px;
+		padding: 10px;
+		underline:none
+	text-decoration:none;
+
+	}
+
+
+
+
+
+.modal1 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content1 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close1 {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: roboto;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.loginmodal-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #4d90fe;
+  padding: 17px 0px;
+  font-family: roboto;
+  font-size: 14px;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.loginmodal-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+} 
+
+.login-help{
+  font-size: 12px;
+}
+
+			</style>
+
+</head>
+<body>
+	<div class="container-fluid">
+	
+
+
+	<div class="row">
+        <div class="col-lg-12"> <div class="header">
+            <p><img height="50" width="13%" class="img" src="project.JPG" alt="logo"></p></p>
+    
+    <p style="float: right;">Welcome <!-- <a  href="#" data-toggle="modal" data-target="#login-modal">Login</a> -->
+        <span id="getUserName"></span>
+    </p>
+           
+     
+    </div></div>
+     <div class="col-lg-2"><div class="pageLeftPanel">
+                <nav class="nav">               
+        <ul>
+            <li><a href="#Dashboard" title="Dashboard" style="text-decoration:none;">Dashboard</a></li>
+                    <br>
+            <li><a href="#Beacon Analytics" title="Beacon Analytics" style="display: inline; text-decoration:none;">Beacon Analytics</a></li>
+                    
+            <li><a href="#Location Management" title="Location Management" style="display: inline; text-decoration:none;">Location Management</a></li>
+            
+            <li><a href="#Tag Management" title="Tag Management" style="display: inline; text-decoration:none;">Tag Management</a></li>
+        
+            <li><a href="#User Management" title="User Management" style="display: inline; text-decoration:none;">User Management</a></li>
+    </ul>
+        
+    </nav>
+     </div></div>
+     <div class="col-lg-10">
+         <div class="container">
+        
+    
+
+    <div class="row pt-md-2">
+        <div class="col-sm-12 ">
+
+            <h2>User Administrator</h2>
+            <p>Registered users are listed below.</p>
+            <button data-toggle="modal" data-target="#myModal" class="btn btn-primary float-right"><i class="fas fa-edit"></i> Add New</button>
+  
+     
+        </div>
+    </div>
+    
+    <div class="row pt-md-4">
+        <div class="col-md-12">
+            <table id="usersDetails" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <td>
+                            Name
+                        </td>
+                        <td>
+                            Login(e-mail)
+                        </td>
+                        <td>
+                            Address
+                        </td>
+                         <td>
+                            Ph number
+                        </td>
+                         <td>
+                            Access Role
+                            <i class="fas fa-info-circle" id="btninfo"></i>  
+                        </td>
+                        <td>
+                        Update | Delete
+                    </td>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+     </div>
+     </div>   
+    </div>
+ 			
+
+
+</div>
+
+
+</div>
+    
+    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center bg-primary">
+                    <h5 class="modal-title text-white">Add User</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label class="form-control-label col-sm-4">Name</label>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fas fa-user"></i></span>
+                                        <input type="text" id="Name" class="form-control" placeholder="Enter name" />
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label class="form-control-label col-sm-4">E-mail</label>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fas fa-envelope-square"></i></span>
+                                        <input type="text" class="form-control" id="e-mail" placeholder="Enter email address">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label class="form-control-label col-sm-4">Address</label>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fas fa-address-card"></i></span>
+                                        <input type="text" class="form-control" id="Address" placeholder="Enter address">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label class="form-control-label col-sm-4">Phone Number</label>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fas fa-phone"></i></span>
+                                        <input type="number" class="form-control" id="Phone_Number" placeholder="Enter Phone Number">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label class="form-control-label col-sm-4">Access Role</label>
+
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fas fa-anchor"></i></span>
+                                        <input type="text" class="form-control" id="AccessRole" placeholder="Enter Role">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                   
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnSave" class="btnAdd btn btn-primary">Save changes</button>
+                    <button type="button"  class="btnEdit btn btn-primary" style="display: none">update changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog modal-sm">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Popup Box</h4>
+        </div>
+        <div class="modal-body">
+          <p> <h5>Access Role</h5>
+        <p>A User can be assigned to one of the following Role:</p>
+        <h5>Manager</h5>
+        <p>This role has access to all modules.</p>
+        <h5>User</h5>
+        <p>This role has access to all modules except User Administration,Assets and API keys. </p></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog">
+                <div class="loginmodal-container">
+                    <h1>Login to Your Account</h1><br>
+                  <form>
+                    <input type="text" name="user" placeholder="Username">
+                    <input type="password" name="pass" placeholder="Password">
+                    <input type="submit" name="login" class="login loginmodal-submit" value="login">
+                  </form>
+                    
+                  <div class="login-help">
+                    <a href="#">Register</a> - <a href="#">Forgot Password</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+      <script src="Lib/jquery/jquery-3.3.1.min.js"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="Lib/bootstrap4/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.16/datatables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+    <script>
+        var table;
+        $(document).ready(function() {
+            table = $("#usersDetails").DataTable({
+                "responsive":true,
+                "oLanguage": { "sEmptyTable": "No values are added yet" }
+            });
+
+    alert($.session.get("Username"));
+        });
+
+        $("#usersDetails").on("click",".btnDelete", function () {
+           var v=  table.row($(this).closest("tr")).remove().draw();
+        });
+
+        
+        $("#btninfo").on("click",function(){
+                $("#myModal1").modal('toggle');
+        });
+         
+         var tr;
+         $("#usersDetails").on("click",".btnUpdate",function(){
+                
+                    tr= $(this).closest("tr").children();
+                   console.log(tr);
+                   var name = tr[0].innerHTML;
+                   var email=tr[1].innerHTML;
+                   var address=tr[2].innerHTML;
+                   var phone=tr[3].innerHTML;
+                   var accessRole=tr[4].innerHTML;
+                    $("#myModal").modal("toggle");
+                    $("#Name").val(name);
+                    $("#e-mail").val(email);
+                    $("#Address").val(address);
+                    $("#Phone_Number").val(phone);
+                    $("#AccessRole").val(accessRole);
+                    $(".btnEdit").show();
+                    $("#btnSave").hide();
+
+                    $("#Name").val("");
+                $("#e-mail").val("");
+                $("#Address").val("");
+                $("#Phone_Number").val("");
+                $("#AccessRole").val("");
+                $("#myModal").modal('toggle');
+         });
+
+         $("#btnSave").on("click", function () {
+            
+            if($(this).hasClass("btnAdd")){
+                var Name = $("#Name").val();
+                var email = $("#e-mail").val();
+                var Address = $("#Address").val();
+                var Phone_Number = $("#Phone_Number").val();
+                var Access_Role = $("#AccessRole").val();
+                table.row.add([
+                ""+Name+"" ,
+                ""+email+"" ,
+                ""+Address+"",
+                ""+Phone_Number+"",
+                ""+Access_Role+"",
+
+                "<button type='button' class='btnUpdate btn btn-primary' > <i class='fas fa-pencil-alt'></i></button><button type='button' class='btnDelete btn btn-danger' ><i class='far fa-trash-alt'></i> </button>"
+
+                ]).draw();
+
+                $("#Name").val("");
+                $("#e-mail").val("");
+                $("#Address").val("");
+                $("#Phone_Number").val("");
+                $("#AccessRole").val("");
+                $("#myModal").modal('toggle');
+            }
+         });
+
+         $(".btnEdit").on("click",function () {
+              tr[0].innerHTML=$("#Name").val();
+                tr[1].innerHTML=$("#e-mail").val();
+                tr[2].innerHTML=$("#Address").val();
+                tr[3].innerHTML=$("#Phone_Number").val();
+                tr[4].innerHTML=$("#AccessRole").val();
+             console.log(tr,"dasda");
+                             $("#myModal").modal('toggle');
+                             $("#btnSave").show();
+                              $(".btnEdit").hide();
+                              $("#Name").val("");
+                $("#e-mail").val("");
+                $("#Address").val("");
+                $("#Phone_Number").val("");
+                $("#AccessRole").val("");
+                $("#myModal").modal('toggle');
+         });
+
+         $("input[name='login'").on("click",function(){
+                var user = $("input[name='user']").val();
+                var password = $("input[name='pass']").val();
+                
+                if( user =='Nikhil' || password =='nikhil')
+                {
+                        
+                        alert("Successfully login.......");
+                }
+                        else {
+                                alert("please enter correct user @ password");
+                                   
+                               }
+
+
+    });
+
+    </script>
+</body>
+</html>
